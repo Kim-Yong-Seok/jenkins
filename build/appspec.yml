@@ -1,0 +1,19 @@
+version: 0.0
+os: linux
+files:
+  - source:  /
+    destination: /home/dejay/build/
+
+permissions:
+  - object: /
+    pattern: "**"
+    owner: dejay
+    group: dejay
+
+hooks:
+  BeforeInstall:
+    - location: deploy-before.sh
+      runas: dejay
+  ApplicationStart:
+    - location: deploy.sh
+      runas: dejay
