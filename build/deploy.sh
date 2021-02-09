@@ -1,4 +1,4 @@
-cd /usr/local/tomcat
+cd /opt/tomcat
 bin/shutdown.sh
 cd webapps 
 rm -rf ROOT/
